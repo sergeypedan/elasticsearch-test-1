@@ -1,5 +1,7 @@
 # Index — Customize model indexing
 
+Good docs are [here on GitHub](https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model#index-configuration).
+
 Here's the [full template](https://github.com/elastic/elasticsearch-rails/blob/master/elasticsearch-rails/lib/rails/templates/searchable.rb).
 
 The key method here is the `as_indexed_json`. You can define your entire index using this method. It defaults to just calling `as_json` on your object, so you'll probably want to overload that to define the data that you actually want indexed. As a simple example, you may want to define an index on your `Article` model. Here's what it could look like:
