@@ -22,3 +22,7 @@ in this order!
 ### 4. Check
 
 Open <http://localhost:3000> and search something.
+
+### 5. Read some docs
+
+In the `/docs` folder or [here](https://github.com/sergeypedan/elasticsearch-test-1/tree/master/docs) in the GitHub project.
