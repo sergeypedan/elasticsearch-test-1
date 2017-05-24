@@ -13,8 +13,7 @@ module ElasticSearchable
     # index_name [Rails.application.engine_name, Rails.env].join('_')
 
 
-    # Set up index configuration and mapping
-
+    # Index configuration and mapping
     settings index: { number_of_shards: 1, number_of_replicas: 0 }
 
     # Set up callbacks for updating the index on model changes
@@ -26,7 +25,6 @@ module ElasticSearchable
 
 
     # Customize the JSON serialization for Elasticsearch
-
     def as_indexed_json(options={})
       hash = self.as_json(
         only: [:title, :description, :published]
@@ -46,7 +44,7 @@ module ElasticSearchable
 
     def self.search(query, options={})
 
-      Rails.logger.debug ">>>>>>>>> Entering `Article.search`"
+      logger.debug ">>>>>>>>> Entering `Article.search`"
       logger.debug ">>>>>>>>> query: #{query}"
 
 
